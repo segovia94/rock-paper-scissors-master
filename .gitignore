@@ -1,0 +1,18 @@
+# Node modules
+node_modules
+
+# Editor
+.idea
+.vscode
+
+# Source Maps
+*.map
+
+# Node will sometimes create a log file on failures
+*.log
+
+# Custom local gulp config
+gulp-config.local.yml
+
+# Compiled code
+/dist/
