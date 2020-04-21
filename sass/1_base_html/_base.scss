@@ -2,11 +2,15 @@ html {
   // This font size is what the rest of the fonts in the site using REM will be
   // based off of. Changing this size will change it throughout the site.
   @include fluid-type($media-small, $media-huge, $font-size--small, $font-size--large);
+
+  background: linear-gradient(0deg, hsl(237, 49%, 15%) 0%, hsl(214, 47%, 23%) 100%);
+  min-height: 100%;
 }
 
 body {
   color: $font-color;
   font-family: $font-family;
+  font-weight: $font-weight;
   line-height: $line-height;
-  font-size: 1rem;
+  font-size: 1.125rem;;
 }

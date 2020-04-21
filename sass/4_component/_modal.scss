@@ -1,0 +1,36 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-rows: 30vh 1fr 20vh;
+  background-color: $white;
+  justify-items: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity .3s, transform .3s ease-in-out;
+
+  &--open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &__title {
+    color: $dark-text;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+  }
+
+  &__graphic {
+    align-self: start;
+  }
+
+  &__close {
+    display: inline-block;
+    background: none;
+    border: none;
+  }
+}

@@ -6,7 +6,11 @@
 
 $black:                   #000 !default;
 $white:                   #fff !default;
-
+$dark-text:               hsl(229, 25%, 31%) !default;
+$dark-text--alt:          #58546B !default;
+$score-text:              hsl(229, 64%, 46%) !default;
+$header-outline:          hsl(217, 16%, 45%) !default;
+$button-outline:          #8690a9 !default;
 
 // Grays
 // -------------------------
@@ -39,11 +43,11 @@ $link-color--hover:       darken($link-color, 15%) !default;
 // Typography
 // -------------------------
 
-$font-color:              #333 !default;
+$font-color:              #fff !default;
 
 $font-family--native:     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$font-family--sans-serif: $font-family--native !default; // Add custom fonts here with a native fallback.
+$font-family--sans-serif: 'Barlow Semi Condensed', $font-family--native !default;
 $font-family--serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family--monospace:  Menlo, Monaco, Consolas, "Courier New", monospace !default;
 
@@ -57,9 +61,13 @@ $font-size:               16px !default;
 $font-size--large:        ceil($font-size * 1.5) !default; // ~24px
 $font-size--small:        ceil($font-size * 0.85) !default; // ~14px
 
-$font-weight:             normal !default;
+$font-weight:             600 !default;
 $font-weight--light:      lighter !default;
-$font-weight--bold:       bold !default;
+$font-weight--bold:       700 !default;
+
+
+$letter-spacing:          normal !default;
+$letter-spacing--large:   0.15rem !default;
 
 
 // Default Spacing Units
@@ -81,8 +89,8 @@ $fixed-spacer--huge:      $fixed-spacer * 4 !default;
 // Radius
 // -------------------------
 
-$border-radius:           5px !default;
-$border-radius--large:    10px !default;
+$border-radius:           .25rem !default;
+$border-radius--large:    .6rem !default;
 $border-radius--small:    3px !default;
 
 

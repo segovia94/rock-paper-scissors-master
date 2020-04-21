@@ -1,0 +1,25 @@
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, #f2f5fe 0%, $white 100%);
+  border-radius: $border-radius;
+  width: 5.75rem;
+  height: 5rem;
+  color: $dark-text;
+
+  &__title {
+    color: $score-text;
+    font-size: .6rem;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing--large;
+  }
+
+  &__score {
+    color: $dark-text--alt;
+    font-size: 2.75rem;
+    font-weight: $font-weight--bold;
+    line-height: 1;
+  }
+}
