@@ -1,0 +1,15 @@
+.game-message {
+  width: 100%;
+  text-align: center;
+
+  &__status {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: $font-weight--bold;
+  }
+
+  &__button {
+    padding: 1rem 4rem;
+  }
+}

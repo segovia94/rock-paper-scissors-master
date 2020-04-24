@@ -21,35 +21,52 @@
   </header>
 
   <main class="l-main">
-<!--    You Picked-->
-<!--    The House Picked-->
 
-    <section class="screen-1">
-      <button class="medallion medallion--paper screen-1__paper">
-        <span class="medallion__inner">
-          <img src="images/icon-paper.svg" alt="Paper Choice" class="medallion__icon">
-        </span>
-      </button>
+<!--    <section class="l-choice">-->
+<!--      <button class="medallion medallion&#45;&#45;paper l-choice__paper">-->
+<!--        <span class="medallion__inner">-->
+<!--          <img src="images/icon-paper.svg" alt="Paper Choice" class="medallion__icon">-->
+<!--        </span>-->
+<!--      </button>-->
 
-      <button class="medallion medallion--scissors screen-1__scissors">
-        <span class="medallion__inner">
-          <img src="images/icon-scissors.svg" alt="Scissors Choice" class="medallion__icon">
-        </span>
-      </button>
+<!--      <button class="medallion medallion&#45;&#45;scissors l-choice__scissors">-->
+<!--        <span class="medallion__inner">-->
+<!--          <img src="images/icon-scissors.svg" alt="Scissors Choice" class="medallion__icon">-->
+<!--        </span>-->
+<!--      </button>-->
 
-      <button class="medallion medallion--rock screen-1__rock">
-        <span class="medallion__inner">
-          <img src="images/icon-rock.svg" alt="Rock Choice" class="medallion__icon">
-        </span>
-      </button>
+<!--      <button class="medallion medallion&#45;&#45;rock l-choice__rock">-->
+<!--        <span class="medallion__inner">-->
+<!--          <img src="images/icon-rock.svg" alt="Rock Choice" class="medallion__icon">-->
+<!--        </span>-->
+<!--      </button>-->
+<!--    </section>-->
+
+    <section class="l-results">
+      <div class="l-results__player-picked picks">
+        <div class="medallion medallion--paper medallion--disable-interactions">
+          <span class="medallion__inner">
+            <img src="images/icon-paper.svg" alt="Paper Choice" class="medallion__icon">
+          </span>
+        </div>
+        <p class="picks__title">You Picked</p>
+      </div>
+
+      <div class="l-results__computer-picked picks">
+        <div class="medallion medallion--scissors medallion--disable-interactions">
+          <span class="medallion__inner">
+            <img src="images/icon-scissors.svg" alt="Scissors Choice" class="medallion__icon">
+          </span>
+        </div>
+        <p class="picks__title">The House Picked</p>
+      </div>
+
+      <div class="l-results__message game-message">
+        <p class="game-message__status">You Lose</p>
+        <button class="btn btn--invert game-message__button">Play Again</button>
+      </div>
     </section>
 
-
-<!--    You Win-->
-<!--    You Lose-->
-
-<!--    Play Again-->
-<!--    -->
   </main>
 
   <footer class="footer">

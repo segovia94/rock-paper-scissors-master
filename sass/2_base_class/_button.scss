@@ -12,4 +12,15 @@
     background-color: $white;
     color: $dark-text;
   }
+
+  &--invert {
+    background-color: $white;
+    border: 2px solid $white;
+    color: $dark-text;
+
+    &:hover {
+      background-color: $white;
+      color: $dark-text;
+    }
+  }
 }

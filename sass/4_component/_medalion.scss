@@ -16,7 +16,7 @@
   border-radius: 50%;
   transition: transform .125s ease-in-out, box-shadow .125s ease-in-out;
 
-  &:active {
+  &:not(.medallion--disable-interactions):active {
     transform: translateY(.6em);
     box-shadow:
       inset 0 .3em 2px 0 rgba($black, .25),
@@ -53,8 +53,13 @@
     box-shadow: inset 0 .5em 2px 0 #BCBED5;
     transition: background-color .25s;
 
-    .medallion:hover & {
+    .medallion:not(.medallion--disable-interactions):hover & {
       background-color: $white;
+    }
+
+    .medallion--placeholder & {
+      background-color: #1A2946;
+      box-shadow: none;
     }
   }
 
@@ -62,7 +67,7 @@
     width: 45%;
     transition: transform .25s ease-in-out;
 
-    .medallion:hover & {
+    .medallion:not(.medallion--disable-interactions):hover & {
       transform: rotate(25deg);
     }
   }

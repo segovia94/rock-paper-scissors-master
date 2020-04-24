@@ -1,0 +1,10 @@
+.picks {
+  text-align: center;
+
+  &__title {
+    margin-top: 1.5rem;
+    letter-spacing: $letter-spacing--large;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+}

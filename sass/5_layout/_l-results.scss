@@ -1,0 +1,18 @@
+.l-results {
+  display: grid;
+  grid-template-columns: 42% 16% 42%; // Makes each Medallion 42% wide.
+  row-gap: 5vh;
+
+  &__player-picked {
+    grid-column: 1 / 2;
+  }
+
+  &__computer-picked {
+    grid-column: 3 / 4;
+  }
+
+  &__message {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+  }
+}
