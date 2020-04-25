@@ -11,7 +11,7 @@ css:
   outputStyle: compressed
 
 js:
-  enabled: true
+  enabled: false
   src:
     - js/**/*.js
     - '!js/example.js'
