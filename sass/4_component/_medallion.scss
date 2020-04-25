@@ -1,3 +1,5 @@
+$medallion-pulse-color: #3b4e75;
+
 @mixin medallion-shadow($color) {
   box-shadow:
     inset 0 -.3em 0 0 $color,
@@ -5,6 +7,9 @@
     0 .3em .4em rgba($black, .5);
 }
 
+// .medallion--disable-interactions - remove interactive states.
+// .medallion--placeholder - a shadow where the real medallion will be placed.
+// .medallion--winner - adds a pulse to the winning medallion.
 .medallion {
   position: relative;
   display: block;
@@ -70,5 +75,43 @@
     .medallion:not(.medallion--disable-interactions):hover & {
       transform: rotate(25deg);
     }
+  }
+
+  &--winner {
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: '';
+      border-radius: 50%;
+      animation: medallion-pulse 2s 3;
+    }
+  }
+}
+
+@keyframes medallion-pulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba($medallion-pulse-color, 1),
+      0 0 0 0 rgba($medallion-pulse-color, .7),
+      0 0 0 0 rgba($medallion-pulse-color, .5);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 2em rgba($medallion-pulse-color, 0),
+      0 0 0 5em rgba($medallion-pulse-color, 0),
+      0 0 0 8em rgba($medallion-pulse-color, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba($medallion-pulse-color, 0),
+      0 0 0 0 rgba($medallion-pulse-color, 0),
+      0 0 0 0 rgba($medallion-pulse-color, 0);
   }
 }
