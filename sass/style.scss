@@ -1,31 +1,31 @@
 // Main file which will be compiled into style.css
 
 // A cleaner way to do breakpoints/media queries, http://breakpoint-sass.com/
-@import "breakpoint";
+@import "node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 // Site-wide variables
 @import "variables";
 
 // Normalize base css (if not in its own file)
-//@import "normalize/import-now";
+//@import "node_modules/normalize-scss/sass/normalize/import-now";
 
 // Mixins and Resets
 @import "0_tools/mixins";
 @import "0_tools/reset";
 
 // Base
-@import "1_base_html/**/*";
-@import "2_base_class/**/*";
+@import "1_base_html/**/*.scss";
+@import "2_base_class/**/*.scss";
 
 // Objects
-@import "3_objects/**/*";
+@import "3_objects/**/*.scss";
 
 // Components
-@import "4_component/**/*";
-@import "5_layout/**/*";
+@import "4_component/**/*.scss";
+@import "5_layout/**/*.scss";
 
 // Utility Overrides
-@import "6_utility/**/*";
+@import "6_utility/**/*.scss";
 
 // Hacks
 @import "hacks";

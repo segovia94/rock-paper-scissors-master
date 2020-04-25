@@ -141,7 +141,20 @@ $zindex-modal:            1050 !default;
 // -------------------------
 // Override objects here or enable modifiers like $o-media-enable--flush
 $o-media-gutter:          $spacer !default;
-$o-box-spacing-unit:      $fixed-spacer !default;
+$o-box-spacer:            $spacer !default;
+
+$o-media-enable--rev:     false !default;
+$o-media-enable--flush:   false !default;
+$o-media-enable--tiny:    false !default;
+$o-media-enable--small:   false !default;
+$o-media-enable--large:   false !default;
+$o-media-enable--huge:    false !default;
+
+$o-box-enable--flush:     false !default;
+$o-box-enable--tiny:      false !default;
+$o-box-enable--small:     false !default;
+$o-box-enable--large:     false !default;
+$o-box-enable--huge:      false !default;
 
 
 // Container sizes

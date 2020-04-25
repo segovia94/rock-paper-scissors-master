@@ -3,7 +3,7 @@
 // @link https://github.com/inuitcss/objects.box/blob/master/_objects.box.scss
 
 // Box Object: Default Spacing unit
-$o-box-spacer:          16px !default; // This is 1em at default.
+$o-box-spacer:          1rem !default; // This is 1rem at default.
 // Box Object: Tiny Spacing unit
 $o-box-spacer--tiny:    round($o-box-spacer / 4) !default;
 // Box Object: Small Spacing unit

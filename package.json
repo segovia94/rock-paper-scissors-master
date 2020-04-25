@@ -2,16 +2,22 @@
   "name": "rock-paper-scissors-master",
   "version": "1.0.0",
   "description": "Frontend Mentor challenge of rock, paper, scissors",
-  "main": "gulpfile.js",
-  "private": true,
+  "main": "index.html",
   "author": "Mark Miller",
+  "license": "MIT",
   "scripts": {
-    "start": "gulp"
+    "start": "npm run sass",
+    "build": "node-sass sass --output dist --output-style compact --importer node_modules/node-sass-glob-importer/dist/cli.js && npm run prefix",
+    "sass": "node-sass sass --watch sass --output dist --source-map true --importer node_modules/node-sass-glob-importer/dist/cli.js",
+    "prefix": "postcss dist/style.css --use autoprefixer --output dist/style.css",
+    "postinstall": "npm run build"
   },
   "devDependencies": {
-    "ucd-theme-tasks": "^3.0.0"
-  },
-  "engines": {
-    "node": ">=10.16.0"
+    "autoprefixer": "^9.7.6",
+    "breakpoint-sass": "^2.7.1",
+    "node-sass": "^4.14.0",
+    "node-sass-glob-importer": "^5.3.2",
+    "normalize-scss": "^7.0.1",
+    "postcss-cli": "^7.1.0"
   }
 }
