@@ -75,6 +75,10 @@ $medallion-pulse-color: #3b4e75;
     .medallion:not(.medallion--disable-interactions):hover & {
       transform: rotate(25deg);
     }
+
+    .medallion--placeholder & {
+      display: none;
+    }
   }
 
   &--winner {
