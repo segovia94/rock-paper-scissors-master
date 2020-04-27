@@ -21,6 +21,10 @@ $medallion-pulse-color: #3b4e75;
   border-radius: 50%;
   transition: transform .125s ease-in-out, box-shadow .125s ease-in-out;
 
+  &:focus {
+    outline: none;
+  }
+
   &:not(.medallion--disable-interactions):active {
     transform: translateY(.6em);
     box-shadow:
@@ -58,7 +62,8 @@ $medallion-pulse-color: #3b4e75;
     box-shadow: inset 0 .5em 2px 0 #BCBED5;
     transition: background-color .25s;
 
-    .medallion:not(.medallion--disable-interactions):hover & {
+    .medallion:not(.medallion--disable-interactions):hover &,
+    .medallion:focus & {
       background-color: $white;
     }
 
@@ -72,7 +77,8 @@ $medallion-pulse-color: #3b4e75;
     width: 45%;
     transition: transform .25s ease-in-out;
 
-    .medallion:not(.medallion--disable-interactions):hover & {
+    .medallion:not(.medallion--disable-interactions):hover &,
+    .medallion:focus & {
       transform: rotate(25deg);
     }
 

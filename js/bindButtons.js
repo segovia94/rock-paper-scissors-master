@@ -5,7 +5,9 @@ export const bindChoices = (game) => {
   buttons.forEach(button => {
     button.addEventListener('click', function () {
       const choice = this.getAttribute('data-choice')
-      game.setChoice(choice)
+      setTimeout(() => {
+        game.setChoice(choice)
+      }, 500)
     })
   })
 }

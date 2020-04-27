@@ -4,6 +4,7 @@
   row-gap: 5vh;
   flex-grow: 1;
   margin-top: 5vh;
+  animation: fade-in .5s 1;
 
   &__player-picked {
     grid-column: 1 / 2;
