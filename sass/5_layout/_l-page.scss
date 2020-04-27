@@ -2,6 +2,6 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   justify-items: center;
-  align-items: center;
+  row-gap: 1rem;
   min-height: 100vh;
 }
