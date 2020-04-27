@@ -14,18 +14,37 @@
 @import "0_tools/reset";
 
 // Base
-@import "1_base_html/**/*.scss";
-@import "2_base_class/**/*.scss";
+@import "1_base_html/base";
+@import "1_base_html/forms";
+@import "1_base_html/headings";
+@import "1_base_html/links";
+@import "1_base_html/media";
+@import "1_base_html/text";
+@import "2_base_class/button";
 
 // Objects
-@import "3_objects/**/*.scss";
+//@import "3_objects/o-box";
+//@import "3_objects/o-media";
 
 // Components
-@import "4_component/**/*.scss";
-@import "5_layout/**/*.scss";
+@import "4_component/attribution";
+@import "4_component/end-message";
+@import "4_component/footer";
+@import "4_component/header";
+@import "4_component/medallion";
+@import "4_component/modal";
+@import "4_component/picks";
+@import "4_component/scoreboard";
+@import "5_layout/l-choices";
+//@import "5_layout/l-container";
+@import "5_layout/l-main";
+@import "5_layout/l-page";
+@import "5_layout/l-results";
 
 // Utility Overrides
-@import "6_utility/**/*.scss";
+//@import "6_utility/u-clearfix";
+//@import "6_utility/u-space";
+@import "6_utility/u-visibility";
 
 // Hacks
 @import "hacks";
