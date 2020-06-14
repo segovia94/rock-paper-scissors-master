@@ -1,0 +1,8 @@
+.l-header {
+  width: calc(100% - 4rem);
+  margin-top: 2rem;
+
+  @include breakpoint($bp-medium--up) {
+    max-width: 30rem;
+  }
+}
