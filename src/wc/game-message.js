@@ -1,10 +1,10 @@
 import { LitElement, html, css } from 'lit-element'
 
 /**
- * An example element.
+ * End Game Message.
  *
- * @slot - This element has a slot
- * @csspart button - The button
+ * @message - Text about if winning or not.
+ * @csspart button - Play Again button.
  */
 export class GameMessage extends LitElement {
   static get styles() {
@@ -69,7 +69,7 @@ export class GameMessage extends LitElement {
   render() {
     return html`
       <p class="status">${this.message}</p>
-      <button class="btn" @click=${this._playAgain}>Play Again</button>
+      <button class="btn" @click=${this._playAgain} part="button">Play Again</button>
     `
   }
 
