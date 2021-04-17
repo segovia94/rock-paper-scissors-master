@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/sass/normalize.scss">
   <link rel="stylesheet" href="/src/sass/style.scss">
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </head>
 <body class="l-page">
   <header class="l-header header">
@@ -62,10 +62,7 @@
         <p class="picks__title">The House Picked</p>
       </div>
 
-      <div class="l-results__message game-message u-hidden" data-message>
-        <p class="game-message__status" data-message-status>You Lose</p>
-        <button class="btn btn--invert game-message__button" data-reset>Play Again</button>
-      </div>
+      <game-message class="l-results__message u-hidden"></game-message>
     </section>
 
   </main>

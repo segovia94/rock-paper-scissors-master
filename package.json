@@ -5,12 +5,6 @@
   "main": "index.html",
   "author": "Mark Miller",
   "license": "MIT",
-  "exports": {
-    ".": "./dist/my-vite-element.es.js"
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "start": "npm run dev",
     "dev": "vite",

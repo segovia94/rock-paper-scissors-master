@@ -2,8 +2,7 @@ import getWinner from './getWinner.js'
 
 const choicesBoard = document.querySelector('[data-choices]')
 const resultBoard = document.querySelector('[data-results]')
-const messageBox = document.querySelector('[data-message]')
-const messageStatus = document.querySelector('[data-message-status]')
+const messageBox = document.querySelector('game-message')
 const scoreBox = document.querySelector('[data-score]')
 const pickPlayer = document.querySelector('[data-pick="player"]')
 const pickPlayerMedallion = document.querySelector('[data-pick="player"] .medallion__icon')
@@ -73,17 +72,17 @@ export default class GameBoard {
       // Set the success message.
       switch (winner) {
         case -1:
-          messageStatus.textContent = `It's a Tie`
+          messageBox.setAttribute('message', `It's a Tie`)
           break
         case 0:
           this.score--
-          messageStatus.textContent = 'You Lose'
+          messageBox.setAttribute('message', 'You Lose')
           pickComputer.classList.add(`medallion--winner`)
           scoreBox.textContent = this.score.toString()
           break
         case 1:
           this.score++
-          messageStatus.textContent = 'You Win'
+          messageBox.setAttribute('message', 'You Win')
           pickPlayer.classList.add(`medallion--winner`)
           scoreBox.textContent = this.score.toString()
           break

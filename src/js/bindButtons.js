@@ -14,8 +14,8 @@ export const bindChoices = (game) => {
 
 // Play Again
 export const bindPlayAgain = (game) => {
-  const resetButton = document.querySelector('[data-reset]')
-  resetButton.addEventListener('click', () => {
+  const resetButton = document.querySelector('game-message')
+  resetButton.addEventListener('playAgain', () => {
     game.resetBoard()
   })
 }
