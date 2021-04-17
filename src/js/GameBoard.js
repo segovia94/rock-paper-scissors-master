@@ -3,7 +3,7 @@ import getWinner from './getWinner.js'
 const choicesBoard = document.querySelector('[data-choices]')
 const resultBoard = document.querySelector('[data-results]')
 const messageBox = document.querySelector('game-message')
-const scoreBox = document.querySelector('[data-score]')
+const scoreBox = document.querySelector('game-scoreboard')
 const pickPlayer = document.querySelector('[data-pick="player"]')
 const pickPlayerMedallion = document.querySelector('[data-pick="player"] .medallion__icon')
 const pickComputer = document.querySelector('[data-pick="computer"]')
@@ -78,13 +78,13 @@ export default class GameBoard {
           this.score--
           messageBox.setAttribute('message', 'You Lose')
           pickComputer.classList.add(`medallion--winner`)
-          scoreBox.textContent = this.score.toString()
+          scoreBox.setAttribute('score', this.score)
           break
         case 1:
           this.score++
           messageBox.setAttribute('message', 'You Win')
           pickPlayer.classList.add(`medallion--winner`)
-          scoreBox.textContent = this.score.toString()
+          scoreBox.setAttribute('score', this.score)
           break
       }
 
