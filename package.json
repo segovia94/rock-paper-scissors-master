@@ -1,23 +1,28 @@
 {
   "name": "rock-paper-scissors-master",
   "version": "1.0.0",
-  "description": "Frontend Mentor challenge of rock, paper, scissors",
+  "description": "Frontend Mentor challenge of rock, paper, scissors using litElement",
   "main": "index.html",
   "author": "Mark Miller",
   "license": "MIT",
+  "exports": {
+    ".": "./dist/my-vite-element.es.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "npm run sass:build && npm run sass:watch",
-    "build": "npm run sass:build && npm run autoprefix",
-    "sass:build": "node-sass sass --output dist --output-style compact",
-    "sass:watch": "node-sass sass --watch sass --output dist --source-map true",
-    "autoprefix": "postcss dist/style.css --use autoprefixer --output dist/style.css",
-    "postinstall": "npm run build"
+    "start": "npm run dev",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
+    "vite": "^2.1.5",
     "breakpoint-sass": "^2.7.1",
-    "node-sass": "^4.14.0",
-    "normalize-scss": "^7.0.1",
-    "postcss-cli": "^7.1.0"
+    "sass": "^1.32.10",
+    "normalize-scss": "^7.0.1"
   }
 }

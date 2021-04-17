@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/images/favicon-32x32.png">
 
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dist/normalize.css">
-  <link rel="stylesheet" href="dist/style.css">
-  <script type="module" src="js/main.js"></script>
+  <link rel="stylesheet" href="/src/sass/normalize.scss">
+  <link rel="stylesheet" href="/src/sass/style.scss">
+  <script type="module" src="/src/js/main.js"></script>
 </head>
 <body class="l-page">
   <header class="l-header header">
-    <img src="images/logo.svg" alt="Rock, Paper, Scissors logo" class="header__logo">
+    <img src="/src/images/logo.svg" alt="Rock, Paper, Scissors logo" class="header__logo">
     <section class="scoreboard">
       <div class="scoreboard__title">Score</div>
       <div class="scoreboard__score" data-score>0</div>
@@ -26,19 +26,19 @@
     <section class="l-choices" data-choices>
       <button class="medallion medallion--paper l-choices__paper" data-choice="paper">
         <span class="medallion__inner">
-          <img src="images/icon-paper.svg" alt="Paper Choice" class="medallion__icon">
+          <img src="/src/images/icon-paper.svg" alt="Paper Choice" class="medallion__icon">
         </span>
       </button>
 
       <button class="medallion medallion--scissors l-choices__scissors" data-choice="scissors">
         <span class="medallion__inner">
-          <img src="images/icon-scissors.svg" alt="Scissors Choice" class="medallion__icon">
+          <img src="/src/images/icon-scissors.svg" alt="Scissors Choice" class="medallion__icon">
         </span>
       </button>
 
       <button class="medallion medallion--rock l-choices__rock" data-choice="rock">
         <span class="medallion__inner">
-          <img src="images/icon-rock.svg" alt="Rock Choice" class="medallion__icon">
+          <img src="/src/images/icon-rock.svg" alt="Rock Choice" class="medallion__icon">
         </span>
       </button>
     </section>
@@ -47,7 +47,7 @@
       <div class="l-results__player-picked picks">
         <div class="medallion medallion--disable-interactions" data-pick="player">
           <span class="medallion__inner">
-            <img src="images/icon-paper.svg" alt="Paper Choice" class="medallion__icon">
+            <img src="/src/images/icon-paper.svg" alt="Paper Choice" class="medallion__icon">
           </span>
         </div>
         <p class="picks__title">You Picked</p>
@@ -56,7 +56,7 @@
       <div class="l-results__computer-picked picks">
         <div class="medallion medallion--disable-interactions medallion--placeholder" data-pick="computer">
           <span class="medallion__inner">
-            <img src="images/icon-scissors.svg" alt="Scissors Choice" class="medallion__icon">
+            <img src="/src/images/icon-scissors.svg" alt="Scissors Choice" class="medallion__icon">
           </span>
         </div>
         <p class="picks__title">The House Picked</p>
@@ -75,8 +75,8 @@
     <aside class="modal">
       <div class="modal__inner">
         <h1 class="modal__title">Rules</h1>
-        <img src="images/image-rules.svg" alt="Rules" class="modal__graphic">
-        <button class="modal__close"><img src="images/icon-close.svg" alt="Close the Modal"></button>
+        <img src="/src/images/image-rules.svg" alt="Rules" class="modal__graphic">
+        <button class="modal__close"><img src="/src/images/icon-close.svg" alt="Close the Modal"></button>
       </div>
     </aside>
 

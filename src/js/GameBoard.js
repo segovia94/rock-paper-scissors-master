@@ -56,12 +56,12 @@ export default class GameBoard {
     const { winner, computerChoice } = getWinner(this.playerChoice)
 
     // Update the Player's Medallion pick.
-    pickPlayerMedallion.src = `images/icon-${this.playerChoice}.svg`
+    pickPlayerMedallion.src = `/src/images/icon-${this.playerChoice}.svg`
     pickPlayerMedallion.alt = `You picked ${this.playerChoice}`
     pickPlayer.classList.add(`medallion--${this.playerChoice}`)
 
     // Update the Computer's Medallion pick.
-    pickComputerMedallion.src = `images/icon-${computerChoice}.svg`
+    pickComputerMedallion.src = `/src/images/icon-${computerChoice}.svg`
     pickComputerMedallion.alt = `The House picks ${computerChoice}`
 
     // Switch the boards.
