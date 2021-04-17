@@ -3,6 +3,8 @@ import { bindChoices, bindPlayAgain } from './js/bindButtons.js'
 import modal from './js/modal.js'
 import './wc/game-message.js'
 import './wc/game-scoreboard.js'
+import './wc/game-modal.js'
+
 
 const game = new GameBoard(0)
 
