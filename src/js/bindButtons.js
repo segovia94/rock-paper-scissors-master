@@ -1,10 +1,10 @@
 // Make a Choice
 export const bindChoices = (game) => {
-  const buttons = document.querySelectorAll('[data-choice]')
+  const buttons = document.querySelectorAll('game-medallion')
 
   buttons.forEach(button => {
     button.addEventListener('click', function () {
-      const choice = this.getAttribute('data-choice')
+      const choice = this.getAttribute('type')
       setTimeout(() => {
         game.setChoice(choice)
       }, 500)

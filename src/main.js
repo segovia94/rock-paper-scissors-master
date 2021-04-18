@@ -4,6 +4,7 @@ import modal from './js/modal.js'
 import './wc/game-message.js'
 import './wc/game-scoreboard.js'
 import './wc/game-modal.js'
+import './wc/game-medallion.js'
 
 
 const game = new GameBoard(0)

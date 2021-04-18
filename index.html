@@ -21,23 +21,9 @@
   <main class="l-main">
 
     <section class="l-choices" data-choices>
-      <button class="medallion medallion--paper l-choices__paper" data-choice="paper">
-        <span class="medallion__inner">
-          <img src="/src/images/icon-paper.svg" alt="Paper Choice" class="medallion__icon">
-        </span>
-      </button>
-
-      <button class="medallion medallion--scissors l-choices__scissors" data-choice="scissors">
-        <span class="medallion__inner">
-          <img src="/src/images/icon-scissors.svg" alt="Scissors Choice" class="medallion__icon">
-        </span>
-      </button>
-
-      <button class="medallion medallion--rock l-choices__rock" data-choice="rock">
-        <span class="medallion__inner">
-          <img src="/src/images/icon-rock.svg" alt="Rock Choice" class="medallion__icon">
-        </span>
-      </button>
+      <game-medallion type="paper" class="l-choices__paper"></game-medallion>
+      <game-medallion type="scissors" class="l-choices__scissors"></game-medallion>
+      <game-medallion type="rock" class="l-choices__rock"></game-medallion>
     </section>
 
     <section class="l-results u-hidden" data-results>
