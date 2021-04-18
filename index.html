@@ -28,20 +28,12 @@
 
     <section class="l-results u-hidden" data-results>
       <div class="l-results__player-picked picks">
-        <div class="medallion medallion--disable-interactions" data-pick="player">
-          <span class="medallion__inner">
-            <img src="/src/images/icon-paper.svg" alt="Paper Choice" class="medallion__icon">
-          </span>
-        </div>
+        <game-medallion static data-pick="player"></game-medallion>
         <p class="picks__title">You Picked</p>
       </div>
 
       <div class="l-results__computer-picked picks">
-        <div class="medallion medallion--disable-interactions medallion--placeholder" data-pick="computer">
-          <span class="medallion__inner">
-            <img src="/src/images/icon-scissors.svg" alt="Scissors Choice" class="medallion__icon">
-          </span>
-        </div>
+        <game-medallion static data-pick="computer"></game-medallion>
         <p class="picks__title">The House Picked</p>
       </div>
 

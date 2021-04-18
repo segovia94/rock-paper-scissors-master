@@ -5,9 +5,7 @@ const resultBoard = document.querySelector('[data-results]')
 const messageBox = document.querySelector('game-message')
 const scoreBox = document.querySelector('game-scoreboard')
 const pickPlayer = document.querySelector('[data-pick="player"]')
-const pickPlayerMedallion = document.querySelector('[data-pick="player"] .medallion__icon')
 const pickComputer = document.querySelector('[data-pick="computer"]')
-const pickComputerMedallion = document.querySelector('[data-pick="computer"] .medallion__icon')
 
 /**
  * The GameBoard.
@@ -55,13 +53,7 @@ export default class GameBoard {
     const { winner, computerChoice } = getWinner(this.playerChoice)
 
     // Update the Player's Medallion pick.
-    pickPlayerMedallion.src = `/src/images/icon-${this.playerChoice}.svg`
-    pickPlayerMedallion.alt = `You picked ${this.playerChoice}`
-    pickPlayer.classList.add(`medallion--${this.playerChoice}`)
-
-    // Update the Computer's Medallion pick.
-    pickComputerMedallion.src = `/src/images/icon-${computerChoice}.svg`
-    pickComputerMedallion.alt = `The House picks ${computerChoice}`
+    pickPlayer.setAttribute('type', this.playerChoice)
 
     // Switch the boards.
     choicesBoard.classList.add('u-hidden')
@@ -77,19 +69,19 @@ export default class GameBoard {
         case 0:
           this.score--
           messageBox.setAttribute('message', 'You Lose')
-          pickComputer.classList.add(`medallion--winner`)
+          pickComputer.setAttribute('winner', true)
           scoreBox.setAttribute('score', this.score)
           break
         case 1:
           this.score++
           messageBox.setAttribute('message', 'You Win')
-          pickPlayer.classList.add(`medallion--winner`)
+          pickPlayer.setAttribute('winner', true)
           scoreBox.setAttribute('score', this.score)
           break
       }
 
-      pickComputer.classList.add(`medallion--${computerChoice}`)
-      pickComputer.classList.remove('medallion--placeholder')
+      // Update the Computer's Medallion pick.
+      pickComputer.setAttribute('type', computerChoice)
       messageBox.classList.remove('u-hidden')
     }, 1000)
   }
@@ -103,9 +95,12 @@ export default class GameBoard {
     choicesBoard.classList.remove('u-hidden')
     resultBoard.classList.add('u-hidden')
     messageBox.classList.add('u-hidden')
-    pickPlayer.classList.remove('medallion--scissors', 'medallion--rock', 'medallion--paper', 'medallion--winner')
-    pickComputer.classList.remove('medallion--scissors', 'medallion--rock', 'medallion--paper', 'medallion--winner')
-    pickComputer.classList.add('medallion--placeholder')
+
+    const removeAttr = ['type', 'winner']
+    removeAttr.forEach(attribute => {
+      pickPlayer.removeAttribute(attribute)
+      pickComputer.removeAttribute(attribute)
+    });
   }
 
 }
