@@ -1,6 +1,6 @@
 // Make a Choice
 export const bindChoices = (game) => {
-  const buttons = document.querySelectorAll('game-medallion')
+  const buttons = document.querySelectorAll('l-choices game-medallion')
 
   buttons.forEach(button => {
     button.addEventListener('click', function () {
