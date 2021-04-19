@@ -9,7 +9,7 @@ export class LChoices extends LitElement {
       :host {
         box-sizing: border-box;
         display: grid;
-        grid-template-columns: 29% 13% 16% 13% 29%; // Makes each Medallion 42% wide.
+        grid-template-columns: 29% 13% 16% 13% 29%; /* Makes each Medallion 42% wide. */
         row-gap: 7%;
         align-self: center;
         flex-grow: 1;

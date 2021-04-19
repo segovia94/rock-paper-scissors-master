@@ -26,19 +26,19 @@
       <game-medallion slot="rock" type="rock"></game-medallion>
     </l-choices>
 
-    <section class="l-results" hidden data-results>
-      <div class="l-results__player-picked picks">
+    <l-results hidden data-results>
+      <div slot="player" class="picks">
         <game-medallion static data-pick="player"></game-medallion>
         <p class="picks__title">You Picked</p>
       </div>
 
-      <div class="l-results__computer-picked picks">
+      <div slot="computer" class="computerpicks">
         <game-medallion static data-pick="computer"></game-medallion>
         <p class="picks__title">The House Picked</p>
       </div>
 
-      <game-message class="l-results__message" hidden></game-message>
-    </section>
+      <game-message slot="message" hidden></game-message>
+    </l-results>
 
   </main>
 
