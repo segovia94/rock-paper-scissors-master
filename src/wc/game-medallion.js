@@ -9,6 +9,7 @@ export class GameMedallion extends LitElement {
   static get properties() {
     return {
       type: { type: String },
+      disabled: { type: Boolean },
       static: { type: Boolean },
       winner: { type: Boolean }
     }
@@ -17,6 +18,7 @@ export class GameMedallion extends LitElement {
   constructor() {
     super()
     this.type = ''
+    this.disabled = false
     this.static = false
     this.winner = false
   }
@@ -37,7 +39,7 @@ export class GameMedallion extends LitElement {
         </div>
       `:
       html`
-        <button class="medallion medallion--${this.type}">
+        <button class="medallion medallion--${this.type}" ?disabled="${this.disabled}">
           ${this.inner()}
         </button>
       `

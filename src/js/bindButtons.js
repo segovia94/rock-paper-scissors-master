@@ -8,6 +8,11 @@ export const bindChoices = (game) => {
       setTimeout(() => {
         game.setChoice(choice)
       }, 500)
+
+      // Disable clicking again or another button.
+      buttons.forEach(button => {
+        button.disabled = true
+      })
     })
   })
 }

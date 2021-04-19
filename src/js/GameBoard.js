@@ -6,6 +6,7 @@ const messageBox = document.querySelector('game-message')
 const scoreBox = document.querySelector('game-scoreboard')
 const pickPlayer = document.querySelector('[data-pick="player"]')
 const pickComputer = document.querySelector('[data-pick="computer"]')
+const buttons = document.querySelectorAll('game-medallion')
 
 /**
  * The GameBoard.
@@ -101,6 +102,10 @@ export default class GameBoard {
       pickPlayer.removeAttribute(attribute)
       pickComputer.removeAttribute(attribute)
     });
+
+    buttons.forEach(button => {
+      button.disabled = false
+    })
   }
 
 }
