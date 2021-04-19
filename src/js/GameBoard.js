@@ -56,8 +56,8 @@ export default class GameBoard {
     pickPlayer.setAttribute('type', this.playerChoice)
 
     // Switch the boards.
-    choicesBoard.classList.add('u-hidden')
-    resultBoard.classList.remove('u-hidden')
+    choicesBoard.hidden = true
+    resultBoard.hidden = false
 
     // Wait a second to build anticipation.
     setTimeout(() => {
@@ -82,7 +82,7 @@ export default class GameBoard {
 
       // Update the Computer's Medallion pick.
       pickComputer.setAttribute('type', computerChoice)
-      messageBox.classList.remove('u-hidden')
+      messageBox.hidden = false
     }, 1000)
   }
 
@@ -92,9 +92,9 @@ export default class GameBoard {
   resetBoard () {
     this.playerChoice = ''
 
-    choicesBoard.classList.remove('u-hidden')
-    resultBoard.classList.add('u-hidden')
-    messageBox.classList.add('u-hidden')
+    choicesBoard.hidden = false
+    resultBoard.hidden = true
+    messageBox.hidden = true
 
     const removeAttr = ['type', 'winner']
     removeAttr.forEach(attribute => {
