@@ -5,6 +5,7 @@ import './wc/game-message.js'
 import './wc/game-scoreboard.js'
 import './wc/game-modal.js'
 import './wc/game-medallion.js'
+import './wc/game-pick.js'
 import './wc/l-choices.js'
 import './wc/l-results.js'
 
